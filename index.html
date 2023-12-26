@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <script src="https://kit.fontawesome.com/b8eda61fa4.js" crossorigin="anonymous"></script>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title>Responsive Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+
+        .navbar {
+            background-color: #30009c;
+            padding: 10px;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            color: #ffffff;
+        }
+
+        .nav-links li {
+            margin-left: 10px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .left, .right {
+            flex-basis: 50%;
+            padding: 20px;
+        }
+
+        .left h2, .left p {
+            margin-top: 0;
+        }
+
+        .left h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .left p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .right img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* .section:nth-child(odd) {
+            background: rgb(48, 0, 156);
+            background: linear-gradient(0deg, rgba(48, 0, 156, 1) 0%, rgba(98, 0, 238, 1) 100%);
+            color: white;
+        } */
+
+        /* .section:nth-child(even) {
+            background: rgb(48, 0, 156);
+            background: linear-gradient(0deg, rgba(48, 0, 156, 1) 0%, rgba(98, 0, 238, 1) 100%);
+            color: white;
+        } */
+
+        .section:nth-child(1) {
+            background-color:#30009c;
+        }
+
+        .section:nth-child(2) {
+            background: rgb(48,0,156);
+            background: linear-gradient(0deg, rgba(48,0,156,1) 0%, rgba(98,0,238,1) 100%);
+            height: 100%;
+            color:#ffffff;
+        }
+
+        .section:nth-child(3) {
+            background-color: #ffffff;
+        }
+
+        .section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section:nth-child(1) .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .section:nth-child(1) .buttons button {
+            padding: 10px 20px;
+            background-color: #30009c;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn{
+
+            color: #30009c;
+            font-size: larger;
+            font-weight: bolder;
+
+        }
+
+        .card{
+            height: 500px;
+        }
+        .card-img{
+            height: 100%;
+        }
+        .btn-filled{
+            background-color: #30009c;
+            color: #ffffff;
+        }
+       .rounded-box {
+         position: absolute;
+         bottom: 80px;
+         width: 650px;
+         height: 140px;
+         background-color: #faf4f4;
+         border-radius: 20px;
+         box-shadow: -1px 9px 26px -9px rgba(0,0,0,0.48);
+        -webkit-box-shadow: -1px 9px 26px -9px rgba(0,0,0,0.48);
+        -moz-box-shadow: -1px 9px 26px -9px rgba(0,0,0,0.48);
+} 
+
+        .icons{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+         .icon{
+            color: rgb(32, 32, 32);
+            font-size: 40px;
+            margin: 55px;
+            
+
+         }   
+         .card {
+      height: 350px;
+      width: 300px;
+      background-color: rgb(37, 56, 56);
+      border-radius: 20px;
+      box-shadow: 2px 0px 20px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 0px 20px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 0px 20px -3px rgba(0,0,0,0.75);
+    }
+
+    .cardholder {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; /* Center horizontally */
+      align-items: center; /* Center vertically */
+     
+    }
+
+    .box {
+      text-align: center; /* Center text within the box */
+      height: 650px;
+    width: 800px;
+    background-color: #30009c;
+    padding: 30px;
+    color: #ffffff;
+    }
+
+    .cardimg{
+        height: 100%;
+    }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class="logo" href="#">Logo</a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="left">
+                <h3>I am Ali</h3>
+               <h1>A Product Designer</h1>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec in justo eu magna ultrices consequat.</p>
+                
+                <div class="buttons">
+                    <button class=" btn btn-light">My Work</button>
+                    <button class=" btn btn-light">Say Hello</button>
+                </div>
+            </div>
+            <div class="right">
+                <img src="./person.png" alt="Image 1">
+            </div>
+        </div>
+        <div class="rounded-box">
+            <div class=" icons"></div>
+            <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            <i class="icon fa-solid fa-code-compare"></i>
+            <i class="icon fa-solid fa-sun-plant-wilt"></i>
+            <i class="icon fa-solid fa-road-lock"></i>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="left">
+                <h2 class="mt-4">About me</h2>
+                
+                    <button class=" btn-filled btn btn-light border border-secondary mt-5">My Skills</button>
+                    <button class=" btn btn-light border border-secondary mt-5">Expriencs</button>
+                    <button class=" btn btn-light border border-secondary mt-5">Education</button>
+                    <p class="mt-5">Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque laudantium.</p>
+
+                        <img src="./123.JPG" alt="">
+            </div>
+            <div class="right">
+                <img class="mt-4" src="./img2.JPG" alt="Image 2">
+            </div>
+        </div>
+    </section>
+
+    <center>
+        <div> <h5 class="fw-bolder" style="color: #30009c;">MY COURSES</h5>
+            <h1 class="fw-bolder ">How can I Halp You?</h1>
+        </div>
+       
+    </center>
+
+    <section class="section">
+        
+        </center>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card ">
+                    <img src="./24029560.jpg" class="card-img"
+                      alt="Skyscrapers" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card ">
+                    <img src="./24029560.jpg" class="card-img"
+                      alt="Los Angeles Skyscrapers" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card ">
+                    <img src="./24029560.jpg" class="card-img"
+                      alt="Palm Springs Road" />
+                    
+                  </div>
+                </div>
+              </div>
+
+            </center>
+        </div>
+    </section>
+
+   
+   
+   
+    <div class="container">
+        <div class="box">
+          <h5 class="">My Podcast</h5>
+          <h1>Watch my latest Videos</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora vero suscipit molestias minus doloribus  </p>
+    
+          <div class="cardholder">
+            <div class="card mt-4">
+                <img class="cardimg" src="./card.JPG" alt="">
+            </div>
+            <div class="card mt-4">
+                <img class="cardimg" src="./card1.JPG" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <center>
+        <div> <h5 class="fw-bolder mt-4" style="color: #30009c;">PORTFOLIO</h5>
+            <h1 class="fw-bolder ">Latest Work</h1>
+        </div>
+       
+    </center>
+<center>
+    <img src="./Capture.JPG" alt="">
+</center>
+
+<center>
+   <img src="./Capture1.JPG" alt="">
+</center>
+</body>
+</html>
